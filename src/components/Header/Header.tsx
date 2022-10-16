@@ -1,6 +1,7 @@
-import { FC, useContext } from "react";
+import React, { useContext } from "react";
 import Switch from "@mui/material/Switch";
 import { styled } from "@mui/material/styles";
+import { useTranslation } from "react-i18next";
 
 import { ThemeContext } from "../../contexts/ThemeContext";
 import "./Header.scss";
@@ -52,8 +53,9 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-const Header: FC = () => {
+function Header(): JSX.Element {
   const { theme, setTheme } = useContext(ThemeContext);
+  const { t, i18n } = useTranslation();
 
   const handleThemeChange = () => {
     const isCurrentDark = theme === "dark";
@@ -61,12 +63,19 @@ const Header: FC = () => {
     localStorage.setItem("theme", isCurrentDark ? "light" : "dark");
   };
 
+  const handleLocale = () => {
+    i18n.changeLanguage(i18n.language.includes("FR") ? "EN" : "FR");
+  };
+
   return (
     <header className="header">
       <div className="header-content">
+        <button className="header-button__locale" onClick={() => handleLocale()}>
+          {i18n.language.includes("FR") ? t("EN") : t("FR")}
+        </button>
         <MaterialUISwitch defaultChecked={theme === "light"} onChange={() => handleThemeChange()} />
       </div>
     </header>
   );
-};
+}
 export default Header;
