@@ -5,7 +5,7 @@ import { useTranslation, Trans } from "react-i18next";
 import "./WhoIAm.scss";
 
 function WhoIAm(): JSX.Element {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="WhoIAm">
@@ -15,12 +15,19 @@ function WhoIAm(): JSX.Element {
       </Typography>
 
       <Typography variant="h2">
-        <Trans
-          i18nKey="MyJob"
-          components={{
-            bold: <strong className="cerbexa" />,
-          }}
-        />
+        {t("MyJob")}
+        <a
+          href={
+            i18n.language.includes("FR")
+              ? "https://www.cerbexa.com/"
+              : "https://www.cerbexa.com/en/"
+          }
+          target="_blank"
+          rel="noreferrer"
+          className="cerbexa"
+        >
+          <Trans i18nKey="Cerbexa" components={{ bold: <strong /> }} />
+        </a>
       </Typography>
 
       <div className="more">

@@ -4,6 +4,7 @@
   "Copyright": "Copyright ©2022 by Dorian de Nicola",
   "Hi": "Hi",
   "WhoIAm": "My name is <bold>Dorian de Nicola</bold>,",
-  "MyJob": "full-stack developer and co-founder of <bold>Cerbexa</bold>",
-  "Link": "For more information, it goes below"
+  "MyJob": "full-stack developer and co-founder of ",
+  "Cerbexa": "<bold>Cerbexa</bold>",
+  "Link": "For more information, it goes below !"
 }
