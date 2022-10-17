@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import { useTranslation, Trans } from "react-i18next";
+import { isMobile } from "react-device-detect";
 
 import "./WhoIAm.scss";
 
@@ -9,12 +10,12 @@ function WhoIAm(): JSX.Element {
 
   return (
     <div className="WhoIAm">
-      <Typography variant="h2">{t("Hi")}</Typography>
-      <Typography variant="h2">
+      <Typography variant={isMobile ? "h3" : "h2"}>{t("Hi")}</Typography>
+      <Typography variant={isMobile ? "h3" : "h2"}>
         <Trans i18nKey="WhoIAm" components={{ bold: <strong /> }} />
       </Typography>
 
-      <Typography variant="h2">
+      <Typography variant={isMobile ? "h3" : "h2"}>
         {t("MyJob")}
         <a
           href={
@@ -31,7 +32,7 @@ function WhoIAm(): JSX.Element {
       </Typography>
 
       <div className="more">
-        <Typography variant="h5">{t("Link")}</Typography>
+        <Typography variant={isMobile ? "h6" : "h5"}>{t("Link")}</Typography>
         <div className="link-content">
           <a
             href="https://www.linkedin.com/in/dorian-de-nicola/"
