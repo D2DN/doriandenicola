@@ -6,8 +6,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   @include themify($themes) {
     background: themed("colorBackground");
     color: themed("colorText");
   }
+}
+
+.mobile {
+  width: auto;
+  height: auto;
 }

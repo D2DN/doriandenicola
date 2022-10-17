@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import WhoIAm from "./components/WhoIAm";
 import { ThemeContext } from "./contexts/ThemeContext";
+import { isMobile } from "react-device-detect";
 
 function App() {
   const isBrowserDefaultDark = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -19,7 +20,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`theme-${theme}`}>
-        <div className="App">
+        <div className={isMobile ? `App mobile` : "App"}>
           <Header />
           <WhoIAm />
           <Footer />
