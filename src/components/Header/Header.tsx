@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import Switch from "@mui/material/Switch";
 import { styled } from "@mui/material/styles";
 import { useTranslation } from "react-i18next";
+import Typography from "@mui/material/Typography";
+import { isMobile } from "react-device-detect";
 
 import { ThemeContext } from "../../contexts/ThemeContext";
 import "./Header.scss";
@@ -70,10 +72,20 @@ function Header(): JSX.Element {
   return (
     <header className="header">
       <div className="header-content">
-        <button className="header-button__locale" onClick={() => handleLocale()}>
-          {i18n.language.includes("FR") ? t("EN") : t("FR")}
-        </button>
-        <MaterialUISwitch defaultChecked={theme === "light"} onChange={() => handleThemeChange()} />
+        <div className="header-locale-content">
+          <i className="fa-solid fa-location-dot"></i>
+          <Typography variant={isMobile ? "h5" : "h6"}>Montréal</Typography>
+        </div>
+
+        <div className="header-menu">
+          <button className="header-button__locale" onClick={() => handleLocale()}>
+            {i18n.language.includes("FR") ? t("EN") : t("FR")}
+          </button>
+          <MaterialUISwitch
+            defaultChecked={theme === "light"}
+            onChange={() => handleThemeChange()}
+          />
+        </div>
       </div>
     </header>
   );

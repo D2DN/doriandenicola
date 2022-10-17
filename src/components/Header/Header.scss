@@ -1,20 +1,30 @@
 @import "../../styles/themeVariable.scss";
 .header {
-  display: flex;
-  justify-content: flex-end;
   padding: 20px;
   .header-content {
-    width: 100px;
     display: flex;
     justify-content: space-between;
-  }
-  .header-button__locale {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
+    .header-locale-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .fa-solid {
+        margin-right: 10px;
+        padding-bottom: 5px;
+      }
+    }
+    .header-menu {
+      display: flex;
+      .header-button__locale {
+        background: none;
+        color: inherit;
+        border: none;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        margin-right: 5px;
+        padding-bottom: 5px;
+      }
+    }
   }
 }
