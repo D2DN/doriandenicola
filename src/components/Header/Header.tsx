@@ -82,7 +82,7 @@ function Header(): JSX.Element {
             {i18n.language.includes("FR") ? t("EN") : t("FR")}
           </button>
           <MaterialUISwitch
-            aria-label="switch locale"
+            inputProps={{ "aria-label": "change theme" }}
             defaultChecked={theme === "light"}
             onChange={() => handleThemeChange()}
           />

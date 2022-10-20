@@ -17,8 +17,6 @@ function App() {
 
   const [theme, setTheme] = React.useState(getDefaultTheme());
 
-  console.log(isTablet);
-
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`theme-${theme}`}>
