@@ -45,6 +45,22 @@ function WhoIAm(): JSX.Element {
           <a href="https://github.com/D2DN" target="_blank" rel="noreferrer" className="link">
             <i className="icon fa-2xl fa-brands fa-github" />
           </a>
+          <a
+            href="https://twitter.com/DoriandeNicola1"
+            target="_blank"
+            rel="noreferrer"
+            className="link"
+          >
+            <i className="icon fa-2xl fa-brands fa-square-twitter" />
+          </a>
+          <a
+            href="https://linktr.ee/doriandenicola"
+            target="_blank"
+            rel="noreferrer"
+            className="link"
+          >
+            <i className="icon fa-2xl fa-solid fa-link" />
+          </a>
         </div>
       </div>
     </div>
