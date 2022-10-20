@@ -26,6 +26,7 @@ function WhoIAm(): JSX.Element {
           target="_blank"
           rel="noreferrer"
           className="cerbexa"
+          aria-label="liens vers la page de cerbexa"
         >
           <Trans i18nKey="Cerbexa" components={{ bold: <strong /> }} />
         </a>
@@ -39,10 +40,17 @@ function WhoIAm(): JSX.Element {
             target="_blank"
             rel="noreferrer"
             className="link"
+            aria-label="liens vers la page linkedin de Dorian"
           >
             <i className="icon fa-2xl fa-brands fa-linkedin" />
           </a>
-          <a href="https://github.com/D2DN" target="_blank" rel="noreferrer" className="link">
+          <a
+            href="https://github.com/D2DN"
+            target="_blank"
+            rel="noreferrer"
+            className="link"
+            aria-label="liens vers la page github de Dorian"
+          >
             <i className="icon fa-2xl fa-brands fa-github" />
           </a>
           <a
@@ -50,6 +58,7 @@ function WhoIAm(): JSX.Element {
             target="_blank"
             rel="noreferrer"
             className="link"
+            aria-label="liens vers la page twitter de Dorian"
           >
             <i className="icon fa-2xl fa-brands fa-square-twitter" />
           </a>
@@ -58,6 +67,7 @@ function WhoIAm(): JSX.Element {
             target="_blank"
             rel="noreferrer"
             className="link"
+            aria-label="liens vers la page Linktree de Dorian"
           >
             <i className="icon fa-2xl fa-solid fa-link" />
           </a>

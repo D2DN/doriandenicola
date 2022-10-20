@@ -73,7 +73,7 @@ function Header(): JSX.Element {
     <header className="header">
       <div className="header-content">
         <div className="header-locale-content">
-          <i className="fa-solid fa-location-dot"></i>
+          <i className="fa-solid fa-location-dot" aria-label="localization" />
           <Typography variant={isMobile ? "h5" : "h6"}>Montréal</Typography>
         </div>
 
@@ -82,6 +82,7 @@ function Header(): JSX.Element {
             {i18n.language.includes("FR") ? t("EN") : t("FR")}
           </button>
           <MaterialUISwitch
+            aria-label="switch locale"
             defaultChecked={theme === "light"}
             onChange={() => handleThemeChange()}
           />
